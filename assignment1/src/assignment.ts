@@ -5,8 +5,8 @@ function formatString(input: string, toUpper?: boolean): string {
         return input.toUpperCase()
     }
 }
-const result1 = formatString("Hello", false);
-// console.log(result1);
+formatString("Hello", false);
+
 
 
 const books = [
@@ -19,16 +19,16 @@ function filterByRating(items: { title: string; rating: number }[]): { title: st
     const result= items.filter(item=>item.rating>=4)
     return result; 
 }
-const filters= filterByRating(books)
-// console.log(filters);
+filterByRating(books)
+
 
 
 function concatenateArrays<T>(...arrays: T[][]): T[] {
     return ([]as T[]).concat(...arrays);
   }
 
-  const result2=concatenateArrays([1, 2], [3, 4], [5]); 
-//   console.log(result2);
+concatenateArrays([1, 2], [3, 4], [5]); 
+
 
 
 class Vehicle {
@@ -69,8 +69,8 @@ if(typeof value==="string"){
 }
 
 }
-const result5= processValue(50); 
-// console.log(result5);
+processValue(50); 
+
 
 
 
@@ -89,8 +89,8 @@ interface Product {
     { name: "Notebook", price: 25 },
     { name: "Bag", price: 50 }
   ];
-  const result6= getMostExpensiveProduct(products)
-//   console.log(result6);
+getMostExpensiveProduct(products)
+
 
 
 enum Day {
@@ -111,13 +111,13 @@ function getDayType(day: Day): string {
     }
 }
 
-const result7 = getDayType(Day.Sunday)
-// console.log(result7);
+getDayType(Day.Sunday)
+
 
 
 async function squareAsync(n: number): Promise<number> {
     if (n < 0) {
-      throw new Error("Negative number not allowed");
+       throw Error("Negative number not allowed");
     }
   
     return new Promise((resolve) => {
